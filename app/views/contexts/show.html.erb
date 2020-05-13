@@ -1,0 +1,27 @@
+<div>
+  <strong>入力</strong>
+  <%= @context.input %>
+  <% inp = @context.input %>
+  <br>
+  <br>
+  <table border="1">
+    <tr>
+      <th>順列</th>
+    </tr>
+      <% arr = inp.split('') %>
+      <% comb_list = arr.permutation(arr.size).to_a %>
+      <% comb_list.each do |comb| %>
+        <% str = '' %>
+        <% comb.each do |moji| %>
+          <% str += moji %>
+        <% end %>
+        <tr>
+        <th><%= str %></th>
+        </tr>
+      <% end %>
+  </<table>
+  <table>
+</<table>
+</div>
+<br>
+<%= link_to 'いままでの実行一覧', contexts_path %>
