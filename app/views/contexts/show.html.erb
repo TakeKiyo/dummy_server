@@ -7,6 +7,7 @@
   <table border="1">
     <tr>
       <th>順列</th>
+      <th>逆数</th>
     </tr>
       <% arr = inp.split('') %>
       <% comb_list = arr.permutation(arr.size).to_a %>
@@ -16,9 +17,11 @@
           <% str += moji %>
         <% end %>
         <tr>
-        <th><%= str %></th>
+          <th><%= str %></th>
+          <th> 1 / <%= str %></th>
         </tr>
       <% end %>
+
   </<table>
   <table>
 </<table>
